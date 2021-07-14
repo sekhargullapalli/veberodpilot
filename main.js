@@ -20,7 +20,7 @@ function renderBattery(bat_level){
 }
 
 function updateTelemetry(){
-    var url ='https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=10&maxlimit=1';
+    var url ='https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=11&maxlimit=1';
     $.ajax({url:url,
         success:function(data,status,xhr){
             var res = JSON.parse(data);
