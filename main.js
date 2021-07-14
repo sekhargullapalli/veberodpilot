@@ -23,15 +23,15 @@ function updateTelemetry(){
     var url ='https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=10&maxlimit=1';
     $.ajax({url:url,
         success:function(data,status,xhr){
-            var res = JSON.parse(data)
-            var d = new Date(res[0].LoggedAt)
-            $('#valLL').html(d.toUTCString());
-            $('#valT').html(res[0].Temperature);
-            $('#valPH').html(res[0].pH);
-            $('#valO2').html(res[0].OxygenDissolved);
-            $('#valLAM').html(res[0].ElectricalConductivity);
-            $('#valDST').html(res[0].DissolvedSolidsTotal);
-            $('#valTUR').html(res[0].Turbidity);
+            var res = JSON.parse(data);
+            var d = new Date(res[0].LoggedAt);         
+            $('#valLL').html(d.toLocaleString());
+            $('#valT').html(res[0].Temperature.toFixed(2));
+            $('#valPH').html(res[0].pH.toFixed(2));
+            $('#valO2').html(res[0].OxygenDissolved.toFixed(2));
+            $('#valLAM').html(res[0].ElectricalConductivity.toFixed(2));
+            $('#valBGA').html(res[0].DissolvedSolidsTotal.toFixed(2));
+            $('#valTUR').html(res[0].Turbidity.toFixed(2));
             var blevel =res[0].BatteryLevel;
             updateBatteryDisplay(blevel);
         },
@@ -39,4 +39,9 @@ function updateTelemetry(){
             alert('Cannot access server!')
         }
     });
+}
+function convertUTCDateToLocalDate(date) {
+    var newDate = new Date(date);
+    newDate.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+    return newDate;
 }
