@@ -12,12 +12,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    
     <script src="battery.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 
 </head>
 <body>
-    <div class="mainheader">
+    <div class="mainheader valign-wrapper">
+        <a class="material-icons left homeicon" style="margin-left: 10px;margin-right: 30px;" href="index.html">home</a>
         Veberöd Pilot Data
-    </div>  
+    </div>
+
     <div class="lastlogcontainer">
         <div class="lastlogheader">
             Last logged at
@@ -25,15 +29,16 @@
         <span id="valLL" class="lastlog">
            2021-07-14 07:51:33
        </span>
-     <div class="container">         
-         </div>
-         <div class="batterycontainer">
-            <div class="battery"><div class="battery-level" ></div></div>
-         </div> 
-     </div>    
-     <div class="telemetrycontainer">
+     </div>
+
+     <div class="batterycontainer">
+          <div class="battery"><div class="battery-level" ></div></div>
+     </div> 
+     
+    
+     <div class="telemetrycontainer ">
         <div class="row">
-            <div class="col s6 m4 telemetryvalue">
+            <a class="col s6 m4 telemetryvalue" href="temperature.html">
                 <div class="telemetryholder black">
                     <div class="telemetryheader">
                         Temperature
@@ -42,8 +47,8 @@
                         12.6
                     </span>
                 </div>               
-            </div>
-            <div class="col s6 m4 telemetryvalue">
+            </a>
+            <a class="col s6 m4 telemetryvalue" href="ph.html">
                 <div class="telemetryholder">
                     <div class="telemetryheader">
                         pH
@@ -52,8 +57,8 @@
                         7.4
                     </span>
                 </div>               
-            </div>
-            <div class="col s6 m4 telemetryvalue">
+            </a>
+            <a class="col s6 m4 telemetryvalue" href="o2.html">
                 <div class="telemetryholder">
                     <div class="telemetryheader">
                         Oxygen Dissolved
@@ -62,8 +67,8 @@
                         5
                     </span>
                 </div>               
-            </div>
-            <div class="col s6 m4 telemetryvalue">
+            </a>
+            <a class="col s6 m4 telemetryvalue" href="lam.html">
                 <div class="telemetryholder">
                     <div class="telemetryheader">
                         Electric Conductivity
@@ -72,9 +77,9 @@
                         5
                     </span>
                 </div>               
-            </div>
+            </a>
 
-            <div class="col s6 m4 telemetryvalue">
+            <a class="col s6 m4 telemetryvalue" href="bga.html">
                 <div class="telemetryholder">
                     <div class="telemetryheader">
                         Blue Green Algae 
@@ -83,9 +88,9 @@
                         0
                     </span>
                 </div>               
-            </div>
+            </a>
 
-            <div class="col s6 m4 telemetryvalue">
+            <a class="col s6 m4 telemetryvalue" href="tur.html">
                 <div class="telemetryholder">
                     <div class="telemetryheader">
                         Turbidity 
@@ -94,7 +99,7 @@
                         1.62
                     </span>
                 </div>               
-            </div>
+            </a>
 
 
 

@@ -6,6 +6,7 @@
 
 body {
     background-color: #181819;    
+    overflow-y:scroll;
 }
 .mainheader{
     font-family: 'Russo One', sans-serif;
@@ -84,4 +85,17 @@ body {
     font-weight: bold;
     width: 100%;
     color:white;    
+}
+
+.paramHeader {
+    font-family: 'Russo One', sans-serif;
+    font-size: 15px;           
+    padding: 2px;
+    z-index: 5;
+    text-align: center;
+    background-color: #181819;    
+    color:teal;
+}
+.homeicon {
+    color: teal;
 }
