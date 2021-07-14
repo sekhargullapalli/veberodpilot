@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaquita Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="battery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <script src="battery.js"></script>
+
+</head>
+<body>
+    <div class="mainheader">
+        Veberöd Pilot Data
+    </div>  
+    <div class="lastlogcontainer">
+        <div class="lastlogheader">
+            Last logged at
+        </div>
+        <span id="valLL" class="lastlog">
+           2021-07-14 07:51:33
+       </span>
+     <div class="container">         
+         </div>
+         <div class="batterycontainer">
+            <div class="battery"><div class="battery-level" ></div></div>
+         </div> 
+     </div>    
+     <div class="telemetrycontainer">
+        <div class="row">
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder black">
+                    <div class="telemetryheader">
+                        Temperature
+                    </div>
+                    <span id="valT" class="telemetryvalue">
+                        12.6
+                    </span>
+                </div>               
+            </div>
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder">
+                    <div class="telemetryheader">
+                        pH
+                    </div>
+                    <span id="valPH" class="telemetryvalue">
+                        7.4
+                    </span>
+                </div>               
+            </div>
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder">
+                    <div class="telemetryheader">
+                        Oxygen Dissolved
+                    </div>
+                    <span id="valO2" class="telemetryvalue">
+                        5
+                    </span>
+                </div>               
+            </div>
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder">
+                    <div class="telemetryheader">
+                        Electric Conductivity
+                    </div>
+                    <span id="valLAM" class="telemetryvalue">
+                        5
+                    </span>
+                </div>               
+            </div>
+
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder">
+                    <div class="telemetryheader">
+                        Dissolved Solids Total 
+                    </div>
+                    <span id="valDST" class="telemetryvalue">
+                        0
+                    </span>
+                </div>               
+            </div>
+
+            <div class="col s6 m4 telemetryvalue">
+                <div class="telemetryholder">
+                    <div class="telemetryheader">
+                        Turbidity 
+                    </div>
+                    <span id="valTUR" class="telemetryvalue">
+                        1.62
+                    </span>
+                </div>               
+            </div>
+
+
+
+        </div>
+     </div>
+     
+     <div class="mainfooter">
+        Vaquita Technologies 2021
+     </div> 
+     <script src="main.js"></script>
+</body>
+</html>

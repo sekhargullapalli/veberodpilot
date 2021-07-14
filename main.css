@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:300');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+body {
+    background-color: #181819;    
+}
+.mainheader{
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;           
+    padding: 10px;
+    z-index: 5;
+    text-align: center;
+    background-color: #181819;    
+    color:teal;
+}
+.mainfooter {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    min-height: 50px;    
+    background-color: #181819;    
+    color: teal;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 16px;    
+    font-weight: bold;
+    padding: 10px;
+    z-index: 5;
+}
+.batterycontainer{
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;    
+    text-align: center;
+    padding-bottom: 10px;
+}
+.lastlogcontainer{
+    background-color: #181819;
+    color: teal;
+    text-align: center;
+}
+.lastlogheader{
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;    
+}
+.lastlog{
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;    
+}
+.telemetrycontainer{
+    margin: 15px;    
+    padding-top: 10px;
+    text-align: center;
+}
+.telemetryvalue{
+    width: 140px;
+    max-width: 200px;
+    height: 120px !important;       
+}
+.telemetryholder{
+    width: 100%;
+    height: 100%;
+    margin: 5px;    
+    background-color: black;
+    box-shadow: 5px 5px 20px teal;     
+}
+.telemetryheader{
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;   
+    font-weight: bold;
+    padding-bottom: 10px;    
+    color:teal;
+}
+.telemetryvalue{
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Abel', sans-serif;
+    font-size: 32px;   
+    font-weight: bold;
+    width: 100%;
+    color:white;    
+}
