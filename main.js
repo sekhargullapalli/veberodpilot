@@ -33,7 +33,7 @@ function updateTelemetry(){
             $('#valBGA').html(res[0].DissolvedSolidsTotal.toFixed(2));
             $('#valTUR').html(res[0].Turbidity.toFixed(2));
             var blevel =res[0].BatteryLevel;
-            updateBatteryDisplay(blevel);
+            updateBatteryDisplay(blevel.toFixed(2));
         },
         error:function(jqXhr, textStatus, errorMessage){
             alert('Cannot access server!')
