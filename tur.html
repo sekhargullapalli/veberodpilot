@@ -19,9 +19,9 @@
     <script>
         $(document).ready(function () {
             var param = "turbidity";
-            var paramheader = "Full Capacity";
+            var paramheader = "Turbidity";
             $('#paramHeader').html(paramheader);
-            var url = 'https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=11&maxlimit=100&param=' + param;
+            var url = 'https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=10&maxlimit=100&param=' + param;
             console.log(url);
             $.ajax({
                 url: url,
