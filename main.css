@@ -8,6 +8,9 @@ body {
     background-color: #181819;    
     overflow-y:scroll;
 }
+#Warstwa_1 {
+    width: 156px;      
+}
 .mainheader{
     font-family: 'Russo One', sans-serif;
     font-size: 25px;           
@@ -16,6 +19,7 @@ body {
     text-align: center;
     background-color: #181819;    
     color:teal;
+    
 }
 .mainfooter {
     position: fixed;
@@ -42,6 +46,7 @@ body {
     background-color: #181819;
     color: teal;
     text-align: center;
+    margin-top: 10px;
 }
 .lastlogheader{
     font-family: 'Abel', sans-serif;
@@ -54,10 +59,11 @@ body {
 .telemetrycontainer{
     margin: 15px;    
     padding-top: 10px;
-    text-align: center;
+    text-align: center;    
+   
 }
 .telemetryvalue{
-    width: 140px;
+    width: 160px;
     max-width: 200px;
     height: 120px !important;       
 }
@@ -72,7 +78,7 @@ body {
     text-align: center;
     margin-top: 5px;
     font-family: 'Abel', sans-serif;
-    font-size: 18px;   
+    font-size: 16px;   
     font-weight: bold;
     padding-bottom: 10px;    
     color:teal;
@@ -98,4 +104,12 @@ body {
 }
 .homeicon {
     color: teal;
+}
+.settingscontainer{
+    max-width: 300px;
+}
+.spintext{
+    font-family: 'Russo One', sans-serif;
+    font-size: 10px;           
+    margin-top: 5px;
 }

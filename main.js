@@ -1,39 +1,102 @@
-$(document).ready(function () {
-    //renderBattery(0.5);
+$(document).ready(function () {   
+
+    if (!localStorage.stationid)
+        localStorage.stationid = 10;
+        if (!localStorage.param0)
+        localStorage.param0 = "batterylevel";
+    if (!localStorage.param1)
+        localStorage.param1 = "temperature";
+    if (!localStorage.param2)
+        localStorage.param2 = "ph";
+    if (!localStorage.param3)
+        localStorage.param3 = "oxygendissolved";
+    if (!localStorage.param4)
+        localStorage.param4 = "electricconductivity";
+    if (!localStorage.param5)
+        localStorage.param5 = "bga";
+    if (!localStorage.param6)
+        localStorage.param6 = "trubidity";
+
+    $("#lb_param1").html(nameMapping[localStorage.param1]);
+    $("#lb_param2").html(nameMapping[localStorage.param2]);
+    $("#lb_param3").html(nameMapping[localStorage.param3]);
+    $("#lb_param4").html(nameMapping[localStorage.param4]);
+    $("#lb_param5").html(nameMapping[localStorage.param5]);
+    $("#lb_param6").html(nameMapping[localStorage.param6]);
+
+    document.getElementById("span_resetall").addEventListener("click", () => {
+        localStorage.clear();
+        location.reload();
+    },false);
+    
+
+    document.getElementById("a_param0").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param0;
+    },false);
+
+    document.getElementById("a_param1").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param1;
+    },false);
+
+    document.getElementById("a_param2").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param2;
+    },false);
+
+    document.getElementById("a_param3").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param3;
+    },false);
+
+    document.getElementById("a_param4").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param4;
+    },false);
+
+    document.getElementById("a_param5").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param5;
+    },false);
+
+    document.getElementById("a_param6").addEventListener("click", () => {
+        localStorage.selectedparam = localStorage.param6;
+    },false);
+    
     updateBatteryDisplay(0.5);
+
     updateTelemetry();
+    // $(".spincontainer").css("cssText", "display: none;");            
+    // $(".batterycontainer").css("cssText", "display:block;");
+    // $(".telemetrycontainer").css("cssText", "display:block;");
+    // $(".lastlogcontainer").css("cssText", "display:block;");
 
 });
-
-function renderBattery(bat_level){   
-    var level = bat_level * 100;
-    var batteryLevel = jQuery('.battery .battery-level');
-    batteryLevel.css('width', level + '%');
-    batteryLevel.text(level + '%');
-    if (level > 50) {
-        batteryLevel.addClass('high');
-    } else if (level >= 25) {
-        batteryLevel.addClass('medium');
-    } else {
-        batteryLevel.addClass('low');
-    }
-}
 
 function updateTelemetry(){
     var url ='https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=10&maxlimit=1';
     $.ajax({url:url,
         success:function(data,status,xhr){
+
+            $(".spincontainer").css("cssText", "display: block;");            
+            $(".batterycontainer").css("cssText", "display:none;");
+            $(".telemetrycontainer").css("cssText", "display:none;");
+            $(".lastlogcontainer").css("cssText", "display:none;");
+
             var res = JSON.parse(data);
-            var d = new Date(res[0].LoggedAt);         
+            var d = new Date(res[0].LoggedAt);                     
             $('#valLL').html(d.toLocaleString());
-            $('#valT').html(res[0].Temperature.toFixed(2));
-            $('#valPH').html(res[0].pH.toFixed(2));
-            $('#valO2').html(res[0].OxygenDissolved.toFixed(2));
-            $('#valLAM').html(res[0].ElectricalConductivity.toFixed(2));
-            $('#valBGA').html(res[0].DissolvedSolidsTotal.toFixed(2));
-            $('#valTUR').html(res[0].Turbidity.toFixed(2));
+            
+            $('#val_param1').html(GetTelemetryValue(res[0],localStorage.param1));
+            $('#val_param2').html(GetTelemetryValue(res[0],localStorage.param2));
+            $('#val_param3').html(GetTelemetryValue(res[0],localStorage.param3));
+            $('#val_param4').html(GetTelemetryValue(res[0],localStorage.param4));
+            $('#val_param5').html(GetTelemetryValue(res[0],localStorage.param5));
+            $('#val_param6').html(GetTelemetryValue(res[0],localStorage.param6));
+            
             var blevel =res[0].BatteryLevel;
             updateBatteryDisplay(blevel.toFixed(2));
+            
+            $(".spincontainer").css("cssText", "display: none;");            
+            $(".batterycontainer").css("cssText", "display:block;");
+            $(".telemetrycontainer").css("cssText", "display:block;");
+            $(".lastlogcontainer").css("cssText", "display:block;");
+
         },
         error:function(jqXhr, textStatus, errorMessage){
             alert('Cannot access server!')

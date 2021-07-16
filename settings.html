@@ -5,27 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
-
-
-    <title>Vaquita Dashboard</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="battery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="battery.js"></script>
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <script>     
-       
-    </script>
+    <script src="settings.js"></script>   
 
 </head>
 
-<body>   
+<body>
+
     <div class="center-align mainheader">
         <svg id="Warstwa_1" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397.66 83.2">
             <defs>
@@ -114,131 +105,107 @@
             <path class="cls-5" d="M395.86,101" transform="translate(0 -11.32)"></path>
             <path class="cls-5" d="M120.51,101" transform="translate(0 -11.32)"></path>
         </svg>
-    </div> 
-    
+    </div>  
     <div class="center-align">
-        <a class="waves-effect waves-light btn black teal-text" href="settings.html"><i class="material-icons left">settings</i>settings</a>    
-        <span class="waves-effect waves-light btn black teal-text" id="span_resetall"><i class="material-icons left">restore</i>Reset Settings</span>    
-    </div>
-    <div class="lastlogcontainer" style="display:none;">
-        <div class="lastlogheader">
-            Last logged at
-        </div>
-        <span id="valLL" class="lastlog">
-            2021-07-14 07:51:33
-        </span>
-    </div>
-    <div class="spincontainer container center-align" style="padding-top: 180px;">        
-        <div class="preloader-wrapper big active middled">
-            <div class="spinner-layer spinner-teal-only">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
-        </div>
-        <div class="spintext teal-text">loading...</div>
-    </div>
-    <a class="batterycontainer" href="blevel.html" style="display:none;" id="a_param0">
-        <div class="battery">
-            <div class="battery-level"></div>
-        </div>
-    </a>
-
-    <div class="telemetrycontainer center-align" style="display:none;">
-
-        <div class="container" style="max-width: 450px;">
-            <div class="row">
-                <a class="col s6 m6 telemetryvalue" href="temperature.html" id="a_param1">
-                    <div class="telemetryholder black">
-                        <div class="telemetryheader" id="lb_param1">
-                           
-                        </div>
-                        <span id="val_param1" class="telemetryvalue">
-                            
-                        </span>
-                    </div>
-                </a>
-                <a class="col s6 m6 telemetryvalue" href="ph.html" id="a_param2">
-                    <div class="telemetryholder">
-                        <div class="telemetryheader" id="lb_param2">
-                            
-                        </div>
-                        <span id="val_param2" class="telemetryvalue">
-                           
-                        </span>
-                    </div>
-                </a>
-            </div>>
-        </div>
-        <div class="container" style="max-width: 450px;">
-            <div class="row center-align">
-                <a class="col s6 m6 telemetryvalue" href="o2.html" id="a_param3">
-                    <div class="telemetryholder">
-                        <div class="telemetryheader" id="lb_param3">
-                            
-                        </div>
-                        <span id="val_param3" class="telemetryvalue">
-                            
-                        </span>
-                    </div>
-                </a>
-                <a class="col s6 m6 telemetryvalue" href="lam.html" id="a_param4">
-                    <div class="telemetryholder">
-                        <div class="telemetryheader" id="lb_param4">
-                           
-                        </div>
-                        <span id="val_param4" class="telemetryvalue">
-                           
-                        </span>
-                    </div>
-                </a>
-            </div>>
-        </div>
-        <div class="container" style="max-width: 450px;">
-            <div class="row">
-                <a class="col s6 m6 telemetryvalue" href="bga.html"  id="a_param5">
-                    <div class="telemetryholder">
-                        <div class="telemetryheader"  id="lb_param5">
-                            
-                        </div>
-                        <span id="val_param5" class="telemetryvalue">
-                            
-                        </span>
-                    </div>
-                </a>
-
-                <a class="col s6 m6 telemetryvalue" href="tur.html"  id="a_param6">
-                    <div class="telemetryholder">
-                        <div class="telemetryheader"  id="lb_param6">
-                            
-                        </div>
-                        <span id="val_param6" class="telemetryvalue">
-                           
-                        </span>
-                    </div>
-                </a>
-
-            </div>
-
-        </div>    
-    </div>
-    <div style="min-height: 400px;">
-
+        <a class="waves-effect waves-light btn black teal-text" href="index.html"><i class="material-icons left">home</i>home</a>    
+        <div id="updatesettings" class="waves-effect waves-light btn black teal-text" style="margin-left: 10px;" >
+            <i class="material-icons left">update</i>Update Settings
+        </div>  
     </div>
 
-
-    <div class="mainfooter">
-        &copy; Vaquita Technologies 2021. <a class="teal-text" href="mailto:info@vaqtech.com"> Contact Us</a>
-    
+    <div class="container settingscontainer">
+        <form>
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Station ID</label>
+                <select id="sel_stationid" class="browser-default teal-text black">                    
+                    <option value="10" selected>10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="-9999">-9999</option>
+                </select>
+            </div>     
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 1</label>
+                <select id="sel_param1" class="browser-default teal-text black">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>           
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 2</label>
+                <select id="sel_param2" class="browser-default teal-text black">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>     
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 3</label>
+                <select id="sel_param3" class="browser-default teal-text black">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>           
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 4</label>
+                <select id="sel_param4" class="browser-default teal-text black">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>     
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 5</label>
+                <select id="sel_param5" class="browser-default teal-text black">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>     
+            <div style="margin-top: 10px;">
+                <label class="teal-text">Parameter 6</label>
+                <select id="sel_param6" class="browser-default teal-text black small">                    
+                    <option value="temperature">Temperature</option>
+                    <option value="ph">pH</option>
+                    <option value="oxygendissolved">Oxygen Dissolved</option>
+                    <option value="electricconductivity">Electric Conductivity</option>
+                    <option value="bga">Blue Green Algae</option>
+                    <option value="trubidity">Turbidity</option>
+                    <option value="current">Current</option>
+                    <option value="batterylevel">Battery Level</option>
+                </select>
+            </div>     
+        </form>
     </div>
-    <script src="global.js"></script>
-    <script src="main.js"></script>
+
 </body>
 
 </html>
