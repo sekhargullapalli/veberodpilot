@@ -31,6 +31,7 @@
             $.ajax({
                 url: url,
                 success: function (data, status, xhr) {
+                    $('#sp_statid').html("Station ID <span class='stationidcontainer badge teal black-text'>"+localStorage.stationid+"</span>");
                     var rows = JSON.parse(data);
                     var d = new Date(rows[0].date);
                     $('#valLL').html(d.toLocaleString());
@@ -189,6 +190,9 @@
         <a class="waves-effect waves-light btn black teal-text" href="index.html"><i
                 class="material-icons left">home</i>home</a>
     </div>
+    <div class="lastlogheader container valign-wrapper teal-text" id="sp_statid">
+        
+    </div>
 
     <div class="spincontainer container center-align" style="padding-top:180px;display: float;">
         <div class="preloader-wrapper big active middled">
@@ -210,10 +214,10 @@
     <div class="valContainer" style="visibility: collapsed">
         <div class="paramHeader" id="paramHeader">
         </div>
-        <div class="lastlogcontainer">
-            <div class="lastlogheader">
+        <div class="lastlogcontainer">            
+            <span class="lastlogheader">
                 Last logged <span id="valVAL"></span> at
-            </div>
+            </span>
             <span id="valLL" class="lastlog">
                 2021-07-14 07:51:33
             </span>
