@@ -12,11 +12,11 @@ $(document).ready(function () {
     if (!localStorage.param3)
         localStorage.param3 = "oxygendissolved";
     if (!localStorage.param4)
-        localStorage.param4 = "electricconductivity";
+        localStorage.param4 = "electricalconductivity";
     if (!localStorage.param5)
         localStorage.param5 = "bga";
     if (!localStorage.param6)
-        localStorage.param6 = "trubidity";
+        localStorage.param6 = "turbidity";
 
     document.getElementById("sel_stationid").value = localStorage.stationid;
     document.getElementById("sel_param1").value = localStorage.param1;

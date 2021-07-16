@@ -10,7 +10,7 @@
 
 
     <title>Vaquita Dashboard</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main2107161.css">
     <link rel="stylesheet" href="battery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -31,15 +31,15 @@
             <defs>
                 <style>
                     .cls-1 {
-                        fill: teal;
+                        fill: teal !important;
                     }
     
                     .cls-2 {
-                        fill: #36a9e1;
+                        fill: #36a9e1 !important;
                     }
     
                     .cls-3 {
-                        fill: teal;
+                        fill: teal !important;
                     }
     
                     .cls-4,
@@ -50,11 +50,11 @@
                     }
     
                     .cls-4 {
-                        stroke: #21264e;
+                        stroke: teal !important;
                     }
     
                     .cls-5 {
-                        stroke: #5db130;
+                        stroke: #5db130 !important;
                     }
                 </style>
             </defs>
@@ -120,10 +120,14 @@
         <a class="waves-effect waves-light btn black teal-text" href="settings.html"><i class="material-icons left">settings</i>settings</a>    
         <span class="waves-effect waves-light btn black teal-text" id="span_resetall"><i class="material-icons left">restore</i>Reset Settings</span>    
     </div>
+    
     <div class="lastlogcontainer" style="display:none;">
-        <div class="lastlogheader">
-            Last logged at
+        <div class="lastlogheader container valign-wrapper" id="sp_statid">
+            
         </div>
+        <span class="lastlogheader">
+            Last logged at
+        </span>
         <span id="valLL" class="lastlog">
             2021-07-14 07:51:33
         </span>
@@ -144,7 +148,7 @@
         </div>
         <div class="spintext teal-text">loading...</div>
     </div>
-    <a class="batterycontainer" href="blevel.html" style="display:none;" id="a_param0">
+    <a class="batterycontainer" href="trends.html" style="display:none;" id="a_param0">
         <div class="battery">
             <div class="battery-level"></div>
         </div>
@@ -154,7 +158,7 @@
 
         <div class="container" style="max-width: 450px;">
             <div class="row">
-                <a class="col s6 m6 telemetryvalue" href="temperature.html" id="a_param1">
+                <a class="col s6 m6 telemetryvalue" href="trends.html" id="a_param1">
                     <div class="telemetryholder black">
                         <div class="telemetryheader" id="lb_param1">
                            
@@ -164,7 +168,7 @@
                         </span>
                     </div>
                 </a>
-                <a class="col s6 m6 telemetryvalue" href="ph.html" id="a_param2">
+                <a class="col s6 m6 telemetryvalue" href="trends.html" id="a_param2">
                     <div class="telemetryholder">
                         <div class="telemetryheader" id="lb_param2">
                             
@@ -178,7 +182,7 @@
         </div>
         <div class="container" style="max-width: 450px;">
             <div class="row center-align">
-                <a class="col s6 m6 telemetryvalue" href="o2.html" id="a_param3">
+                <a class="col s6 m6 telemetryvalue" href="trends.html" id="a_param3">
                     <div class="telemetryholder">
                         <div class="telemetryheader" id="lb_param3">
                             
@@ -188,7 +192,7 @@
                         </span>
                     </div>
                 </a>
-                <a class="col s6 m6 telemetryvalue" href="lam.html" id="a_param4">
+                <a class="col s6 m6 telemetryvalue" href="trends.html" id="a_param4">
                     <div class="telemetryholder">
                         <div class="telemetryheader" id="lb_param4">
                            
@@ -202,7 +206,7 @@
         </div>
         <div class="container" style="max-width: 450px;">
             <div class="row">
-                <a class="col s6 m6 telemetryvalue" href="bga.html"  id="a_param5">
+                <a class="col s6 m6 telemetryvalue" href="trends.html"  id="a_param5">
                     <div class="telemetryholder">
                         <div class="telemetryheader"  id="lb_param5">
                             
@@ -213,7 +217,7 @@
                     </div>
                 </a>
 
-                <a class="col s6 m6 telemetryvalue" href="tur.html"  id="a_param6">
+                <a class="col s6 m6 telemetryvalue" href="trends.html"  id="a_param6">
                     <div class="telemetryholder">
                         <div class="telemetryheader"  id="lb_param6">
                             

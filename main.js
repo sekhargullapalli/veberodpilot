@@ -11,11 +11,11 @@ $(document).ready(function () {
     if (!localStorage.param3)
         localStorage.param3 = "oxygendissolved";
     if (!localStorage.param4)
-        localStorage.param4 = "electricconductivity";
+        localStorage.param4 = "electricalconductivity";
     if (!localStorage.param5)
         localStorage.param5 = "bga";
     if (!localStorage.param6)
-        localStorage.param6 = "trubidity";
+        localStorage.param6 = "turbidity";
 
     $("#lb_param1").html(nameMapping[localStorage.param1]);
     $("#lb_param2").html(nameMapping[localStorage.param2]);
@@ -78,6 +78,8 @@ function updateTelemetry(){
             $(".telemetrycontainer").css("cssText", "display:none;");
             $(".lastlogcontainer").css("cssText", "display:none;");
 
+            $('#sp_statid').html("Station ID <span class='stationidcontainer badge teal black-text'>"+localStorage.stationid+"</span>");
+
             var res = JSON.parse(data);
             var d = new Date(res[0].LoggedAt);                     
             $('#valLL').html(d.toLocaleString());
@@ -87,7 +89,8 @@ function updateTelemetry(){
             $('#val_param3').html(GetTelemetryValue(res[0],localStorage.param3));
             $('#val_param4').html(GetTelemetryValue(res[0],localStorage.param4));
             $('#val_param5').html(GetTelemetryValue(res[0],localStorage.param5));
-            $('#val_param6').html(GetTelemetryValue(res[0],localStorage.param6));
+            $('#val_param6').html(GetTelemetryValue(res[0],localStorage.param6));            
+
             
             var blevel =res[0].BatteryLevel;
             updateBatteryDisplay(blevel.toFixed(2));

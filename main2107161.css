@@ -11,6 +11,7 @@ body {
 #Warstwa_1 {
     width: 156px;      
 }
+
 .mainheader{
     font-family: 'Russo One', sans-serif;
     font-size: 25px;           
@@ -47,6 +48,7 @@ body {
     color: teal;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 .lastlogheader{
     font-family: 'Abel', sans-serif;
@@ -95,12 +97,16 @@ body {
 
 .paramHeader {
     font-family: 'Russo One', sans-serif;
+    margin-top: 10px;
     font-size: 15px;           
     padding: 2px;
     z-index: 5;
     text-align: center;
     background-color: #181819;    
     color:teal;
+}
+.plotdivcontainer{
+    margin-top: 20px;
 }
 .homeicon {
     color: teal;
@@ -112,4 +118,16 @@ body {
     font-family: 'Russo One', sans-serif;
     font-size: 10px;           
     margin-top: 5px;
+}
+.valContainer{
+    width: 100% !important;    
+}
+.stationidcontainer {   
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;   
+    font-weight: bold;
+    margin-left: 10px;
+}
+#sp_statid{    
+    max-width: 140px;
 }
