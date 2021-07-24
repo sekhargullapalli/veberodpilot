@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trends</title>
 
-    <link rel="stylesheet" href="main2107161.css">
+    <link rel="stylesheet" href="main.css?v=21072401">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,16 +23,20 @@
                 localStorage.selectedparam = "batterylevel";
             if (!localStorage.stationid)
                 localStorage.stationid = 10;
-            var param = localStorage.selectedparam;
+            var param = telemetryMapping[localStorage.selectedparam];
             var paramheader = nameMapping[param];
             $('#paramHeader').html(paramheader);
-            var url = "https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=" + localStorage.stationid + "&maxlimit=100&param=" + param;
-            console.log(url);
+            var url = "https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=" + localStorage.stationid + "&maxlimit=100&param=" + param;            
             $.ajax({
                 url: url,
                 success: function (data, status, xhr) {
                     $('#sp_statid').html("Station ID <span class='stationidcontainer badge teal black-text'>"+localStorage.stationid+"</span>");
-                    var rows = JSON.parse(data);
+                    var rows = JSON.parse(data);                    
+                    if(rows.length==0){
+                        alert("No data available");
+                        $(".spincontainer").css("cssText", "display: none;");
+                        return;
+                    }                   
                     var d = new Date(rows[0].date);
                     $('#valLL').html(d.toLocaleString());
                     $('#valVAL').html(rows[0].value.toFixed(2));

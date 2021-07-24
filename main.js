@@ -69,7 +69,7 @@ $(document).ready(function () {
 });
 
 function updateTelemetry(){
-    var url ='https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=10&maxlimit=1';
+    var url ="https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid="+ localStorage.stationid + "&maxlimit=1";    
     $.ajax({url:url,
         success:function(data,status,xhr){
 
@@ -81,6 +81,11 @@ function updateTelemetry(){
             $('#sp_statid').html("Station ID <span class='stationidcontainer badge teal black-text'>"+localStorage.stationid+"</span>");
 
             var res = JSON.parse(data);
+            if(res.length==0){
+                alert("No data available");
+                $(".spincontainer").css("cssText", "display: none;");
+                return;
+            }                   
             var d = new Date(res[0].LoggedAt);                     
             $('#valLL').html(d.toLocaleString());
             
