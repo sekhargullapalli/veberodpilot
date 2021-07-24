@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 $(document).ready(function () {
     if (!localStorage.stationid)
-        localStorage.stationid = 10;
+        localStorage.stationid = 13;
     if (!localStorage.param1)
         localStorage.param1 = "temperature";
     if (!localStorage.param2)

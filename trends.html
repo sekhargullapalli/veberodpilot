@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="global.js?v=21072401"></script>
 
     <script>
         $(document).ready(function () {
@@ -23,7 +24,7 @@
                 localStorage.selectedparam = "batterylevel";
             if (!localStorage.stationid)
                 localStorage.stationid = 10;
-            var param = telemetryMapping[localStorage.selectedparam];
+            var param = telemetryMapping[localStorage.selectedparam];           
             var paramheader = nameMapping[param];
             $('#paramHeader').html(paramheader);
             var url = "https://europe-west3-vaquita-technologies.cloudfunctions.net/veberodpilottelemetry?stationid=" + localStorage.stationid + "&maxlimit=100&param=" + param;            
@@ -58,7 +59,7 @@
                         name: param,
                         x: dates,
                         y: unpack(rows, 'value'),
-                        line: { color: telemetryColorMapping[param] }
+                        line: { color: telemetryColorMapping[localStorage.selectedparam] }
                     }
                     var layoutParam = {
                         autosize: true,
@@ -244,8 +245,7 @@
     <div class="mainfooter">
         &copy; Vaquita Technologies 2021. <a class="teal-text" href="mailto:info@vaqtech.com"> Contact Us</a>
 
-    </div>
-    <script src="global.js"></script>
+    </div>   
 </body>
 
 </html>

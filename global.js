@@ -24,7 +24,7 @@ const telemetryColorMapping = {
     "oxygendissolved": "green",
     "electricalconductivity": "red",
     "bga": "white",
-    "turbidity": "Turbidity",
+    "turbidity": "teal",
     "current": "white",
     "batterylevel": "yellow"
 }
