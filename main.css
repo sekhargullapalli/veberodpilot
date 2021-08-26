@@ -5,36 +5,20 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
 body {
-    /* background-color: #181819;     */
-    background-color: #010101;
-    overflow-y:hidden;
+    background-color: #181819;    
+    overflow-y:scroll;
 }
 #Warstwa_1 {
     width: 156px;      
 }
-.propheader {
-    color:#7FFF00;
-    text-align: center;
-    font-size: 17px;
-    font-weight: normal;
-    margin-top: -20px;    
 
-}
-.propsubheader {
-    color:#7FFF00;
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
-    margin-top: -2px;    
-
-}
 .mainheader{
     font-family: 'Russo One', sans-serif;
     font-size: 25px;           
     padding: 10px;
     z-index: 5;
     text-align: center;
-    background-color: #010101;    
+    background-color: #181819;    
     color:teal;
     
 }
@@ -44,8 +28,8 @@ body {
     bottom: 0;
     width: 100%;
     min-height: 50px;    
-    background-color: #010101;    
-    color: #7FFF00;
+    background-color: #181819;    
+    color: teal;
     font-family: 'Yantramanav', sans-serif;
     font-size: 16px;    
     font-weight: bold;
@@ -54,7 +38,7 @@ body {
 }
 .batterycontainer{
     margin-top: 10px;
-    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Orbitron', sans-serif;
     font-size: 14px;    
     text-align: center;
     padding-bottom: 10px;

@@ -3,7 +3,7 @@
     border: 2px solid #000;
     content: "";
     display: block;
-    height: 10px;
+    height: 16px;
     position: absolute;
     right: -6px;
     top: 6px;
@@ -12,20 +12,16 @@
 .battery {
     background-color: #fff;
     border: 2px solid #000;
-    height: 26px;
+    height: 32px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 100px;    
+    width: 100px;
 }
 
 .battery .battery-level {
     background-color: #666;
     height: 100%;
-    font-size: 12px;
-    font-weight: bold;
-    color: black;
-    padding-top: 2px;
 }
 .battery .battery-level.high {
     background-color: #66CD00;
